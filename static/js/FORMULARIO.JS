@@ -94,8 +94,22 @@ document.addEventListener('DOMContentLoaded', function() {
         // ⚖️ COMPARAMOS SI COINCIDEN LOS DATOS
         if (usuario.nombre === nombreIngresado && usuario.contrasena === contrasenaIngresada) {
             
-            // ✅ TODO CORRECTO: ENTRAMOS
-            alert('✅ ¡Bienvenido de nuevo, ' + usuario.nombre + '! 🤘\nYa estás dentro de Metalcore Nation.');
+    // TODO CORRECTO: ENTRAR ✅
+    alert(`✅ ¡Bienvenido de nuevo, ${usuario.nombre}! 🤘`);
+
+    // CAMBIAR MENÚ
+    menuIniciar.style.display = 'none';
+    menuCuenta.style.display = 'block';
+
+    // GUARDAMOS SESIÓN Y EL NOMBRE (ESTA ES LA CLAVE)
+    localStorage.setItem('sesionActiva', 'true');
+    localStorage.setItem('usuarioActual', usuario.nombre);
+
+    // RECARGAMOS PÁGINA PARA QUE CARGUE EL NOMBRE DE INMEDIATO
+    window.location.reload();
+
+    // Limpiar formulario
+    formularioLogin.reset();
 
             // CAMBIAR MENÚ
             menuIniciar.style.display = 'none';
@@ -130,14 +144,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
 // Cargamos el nombre y LIMPIAMOS las comillas que sobran
-const nombre = localStorage.getItem('usuarioActual');
+const nombreGuardado = localStorage.getItem('usuarioActual');
 const elementoNombre = document.getElementById('nombreUsuario');
-if (elementoNombre) {
-    elementoNombre.textContent = nombre.replace(/"/g, '');
-}
 
-        misBandas = JSON.parse(localStorage.getItem('misBandas_' + nombre)) || [];
-        mostrarBandasEnPantalla();
+if (elementoNombre && nombreGuardado) {
+    // Limpiamos bien: quitamos comillas, espacios y cualquier cosa rara
+    const nombreLimpio = nombreGuardado.replace(/["']/g, '').trim();
+    elementoNombre.textContent = nombreLimpio;
+} else {
+    // Si por error no hay nombre, ponemos algo por defecto
+    elementoNombre.textContent = "Usuario";
+}
 
         const btnCerrar = document.getElementById('btnCerrar');
         if (btnCerrar) {
