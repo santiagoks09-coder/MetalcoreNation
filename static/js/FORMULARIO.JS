@@ -105,22 +105,8 @@ document.addEventListener('DOMContentLoaded', function() {
     localStorage.setItem('sesionActiva', 'true');
     localStorage.setItem('usuarioActual', usuario.nombre);
 
-    // RECARGAMOS PÁGINA PARA QUE CARGUE EL NOMBRE DE INMEDIATO
-    window.location.reload();
-
     // Limpiar formulario
     formularioLogin.reset();
-
-            // CAMBIAR MENÚ
-            menuIniciar.style.display = 'none';
-            menuCuenta.style.display = 'block';
-
-            // GUARDAMOS SESIÓN ACTIVA
-            localStorage.setItem('sesionActiva', 'true');
-            localStorage.setItem('usuarioActual', usuario.nombre);
-
-            // Limpiar formulario
-            formularioLogin.reset();
 
         } else {
             // ❌ ALGO ESTÁ MAL
@@ -137,25 +123,35 @@ let misBandas = [];
 document.addEventListener('DOMContentLoaded', function() {
     if (window.location.pathname.includes("micuenta.html")) {
 
+        // 🔒 VERIFICAR SESIÓN
         if (localStorage.getItem('sesionActiva') !== 'true') {
             alert("⚠️ Debes iniciar sesión primero");
             window.location.href = "index.html";
             return;
         }
 
-// Cargamos el nombre y LIMPIAMOS las comillas que sobran
-const nombreGuardado = localStorage.getItem('usuarioActual');
-const elementoNombre = document.getElementById('nombreUsuario');
+        // ✅ CARGAR NOMBRE 
+        const nombreGuardado = localStorage.getItem('usuarioActual');
+        const elementoNombre = document.getElementById('nombreUsuario');
 
-if (elementoNombre && nombreGuardado) {
-    // Limpiamos bien: quitamos comillas, espacios y cualquier cosa rara
-    const nombreLimpio = nombreGuardado.replace(/["']/g, '').trim();
-    elementoNombre.textContent = nombreLimpio;
-} else {
-    // Si por error no hay nombre, ponemos algo por defecto
-    elementoNombre.textContent = "Usuario";
-}
+        // 🛡️ SIEMPRE MUESTRA ALGO
+        if (elementoNombre) {
+            if (nombreGuardado && nombreGuardado !== "undefined") {
+                // Limpiamos cualquier cosa rara
+                const nombreLimpio = nombreGuardado.replace(/["']/g, '').trim();
+                elementoNombre.textContent = nombreLimpio;
+            } else {
+                
+                elementoNombre.textContent = "Usuario";
+            }
+        }
 
+        // 📤 CARGAR BANDAS (arreglamos para que no dé error)
+        const nombreParaBandas = localStorage.getItem('usuarioActual')?.replace(/["']/g, '') || "Usuario";
+        misBandas = JSON.parse(localStorage.getItem('misBandas_' + nombreParaBandas)) || [];
+        mostrarBandasEnPantalla();
+
+        // 🚪 BOTÓN CERRAR SESIÓN (PERFECTO)
         const btnCerrar = document.getElementById('btnCerrar');
         if (btnCerrar) {
             btnCerrar.addEventListener('click', function() {
