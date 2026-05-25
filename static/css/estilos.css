@@ -1,0 +1,242 @@
+
+        /* Estilo metalerooo */
+        .bg-metal {
+            background-color: #1a1a1a;
+        }
+        .bg-metal-light {
+            background-color: #2d2d2d;
+        }
+        .text-metal {
+            color: #ff4500; /* Naranja */
+        }
+        .btn-metal {
+            background-color: #ff4500;
+            color: white;
+            border: 2px solid #ff4500;
+        }
+        .btn-metal:hover {
+            background-color: transparent;
+            color: #ff4500;
+            border: 2px solid #ff4500;
+        }
+        .card-metal {
+            background-color: #2d2d2d;
+            color: white;
+            border: 1px solid #ff4500;
+        }
+        /* Letras peques */
+        .text-small-custom{color: rgba(255, 187, 0, 0.568);
+        }
+
+        /* Arreglo para que se vea el texto al escribir */
+.bg-metal {
+    color: #ffffff !important; /* Letra blanca SIEMPRE */
+    background-color: #1a1a1a !important; /* Fondo oscuro FIJO, no cambia */
+}
+
+/* Color para lo que está dentro del recuadro antes de escribir */
+.form-control::placeholder,
+.form-select::placeholder {
+    color: #bbbbbb !important; /* Un gris clarito para las pistas */
+    opacity: 1;
+}
+
+
+        /* Ajustes pagina Canciones de albumes*/
+        .album-card {
+            background-color: #2d2d2d;
+            border: 2px solid #ff4500;
+            border-radius: 10px;
+            transition: all 0.4s ease;
+        }
+        .album-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(255, 69, 0, 0.3);
+        }
+        .album-title {
+            border-bottom: 2px solid #ff4500;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .song-item {
+            border-bottom: 1px solid rgba(255, 69, 0, 0.2);
+            padding: 8px 0;
+            transition: all 0.3s ease;
+        }
+        .song-item:last-child {
+            border-bottom: none;
+        }
+        .song-item:hover {
+            color: #ff4500;
+            padding-left: 10px;
+        }
+        .song-number {
+            color: rgba(255, 187, 0, 0.8);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+            /* Estilos especiales para la tienda */
+    .producto-card {
+        background-color: #1a1a1a;
+        border: 1px solid #ff0000;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        height: 100%;
+    }
+    .producto-card:hover {
+        transform: translateY(-5px);
+        border-color: #ff4500; /* Naranja de la marca */
+    }
+    .producto-imagen {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        background-color: #222;
+        padding: 15px;
+    }
+    .precio {
+        color: #00ff88;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .categoria-titulo {
+        border-left: 4px solid #ff4500; /* Línea naranja */
+        padding-left: 15px;
+        margin: 40px 0 20px;
+        color: #ff4500 !important; /* 🔴 TEXTO NARANJA */
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    /* Color para la descripción de los productos */
+.text-muted {
+    color: #cccccc !important; 
+}
+
+/* ---------------- ESTILOS DEL CARRITO ---------------- */
+.carrito-icono {
+    position: relative;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+    margin-left: 15px;
+}
+.contador-carrito {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ff4500;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+.ventana-carrito {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 380px;
+    height: 100vh;
+    background-color: #1a1a1a;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    padding: 20px;
+    z-index: 1000;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+}
+.ventana-carrito.abierto {
+    right: 0;
+}
+.cerrar-carrito {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ff4500;
+    float: right;
+}
+.item-carrito {
+    border-bottom: 1px solid #333;
+    padding: 15px 0;
+    color: white;
+}
+.total-carrito {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #00ff88;
+    margin: 20px 0;
+}
+.btn-comprar {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-eliminar {
+    color: #ff4500;
+    cursor: pointer;
+    float: right;
+    font-size: 1.2rem;
+}
+
+/* ---------------- ESTILOS DE LA FACTURA ---------------- */
+.factura-estilo {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a; /* Fondo oscuro igual que tu tienda */
+    color: #ffffff; /* Texto blanco */
+    max-width: 550px; /* Ancho máximo */
+    margin: 30px auto; /* Centrar la factura */
+    padding: 25px; /* Espacio interior */
+    border: 2px solid #ff4500; /* Borde naranja de tu marca */
+    border-radius: 10px; /* Esquinas redondeadas */
+}
+
+.factura-titulo {
+    text-align: center; /* Centrar el título */
+    color: #ff4500; /* Color naranja */
+    border-bottom: 2px solid #ff4500; /* Línea inferior naranja */
+    padding-bottom: 15px; /* Espacio debajo del título */
+    margin-bottom: 20px; /* Espacio abajo del título */
+}
+
+.factura-producto {
+    margin-bottom: 15px; /* Espacio entre productos */
+    padding-bottom: 15px; /* Espacio inferior */
+    border-bottom: 1px solid #333; /* Línea separadora gris oscuro */
+}
+
+.factura-dato {
+    margin: 5px 0; /* Espacio entre cada dato */
+    font-size: 16px; /* Tamaño de letra */
+}
+
+.factura-dato strong {
+    color: #ff4500; /* Color naranja para las etiquetas */
+}
+
+.factura-total {
+    font-size: 22px; /* Letra más grande para el total */
+    font-weight: bold; /* Letra gruesa */
+    color: #00ff88; /* Color verde como tus precios */
+    text-align: right; /* Alinear a la derecha */
+    margin-top: 20px; /* Espacio arriba */
+    padding-top: 15px; /* Espacio interior arriba */
+    border-top: 2px solid #333; /* Línea superior */
+}
+
+.factura-pie {
+    text-align: center; /* Centrar el mensaje final */
+    margin-top: 30px; /* Espacio arriba */
+    color: #999; /* Color gris claro */
+    font-size: 14px; /* Tamaño de letra más pequeño */
+}

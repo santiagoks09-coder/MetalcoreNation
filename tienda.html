@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda | Metalcore Nation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./static/css/estilos.css">
+    <script src="./static/js/FORMULARIO.JS"></script>
+
+</head>
+<body>
+
+    <!-- Barra de Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-metal-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-guitar fs-4"></i> METALCORE NATION
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#bandas">Bandas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#discos">Discos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contacto">Comunidad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="canciones.html">Canciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="tienda.html">Tienda</a>
+                    </li>
+                    <li class="nav-item" id="menuIniciarSesion">
+                        <a class="nav-link" href="index.html#inicio-sesion">Iniciar Sesión</a>
+                    </li>
+                    
+                    <li class="nav-item" id="menuCuenta" style="display: none;">
+                        <a class="nav-link" href="micuenta.html">Mi Cuenta</a>
+                    </li>
+                    <!-- Icono del Carrito -->
+                    <li class="nav-item">
+                    <div class="carrito-icono" id="abrirCarrito">
+                    <i class="bi bi-cart-fill"></i>
+        <span class="contador-carrito" id="contadorCarrito">0</span>
+    </div>
+</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mensaje de Acceso -->
+    <section class="py-5 text-center" id="mensajeAcceso">
+        <div class="container">
+            <h2 class="text-metal mb-4">ACCESO RESTRINGIDO</h2>
+            <p class="text-white fs-5 mb-4">Debes iniciar sesión para ver y comprar nuestros productos</p>
+            <a href="index.html#inicio-sesion" class="btn btn-metal btn-lg">Ir a Iniciar Sesión</a>
+        </div>
+    </section>
+
+    <!-- Ventana del Carrito -->
+<div class="ventana-carrito" id="ventanaCarrito">
+    <span class="cerrar-carrito" id="cerrarCarrito">&times;</span>
+    <h3 class="text-white">Mi Carrito</h3>
+    <hr class="border-secondary">
+    <div id="listaCarrito">
+        <p class="text-white text-center">Tu carrito está vacío</p>
+    </div>
+    <div class="total-carrito">Total: $ <span id="totalCarrito">0</span></div>
+    <button class="btn-comprar" id="btnComprar">Finalizar Compra</button>
+</div>
+
+    <!-- Contenido de la Tienda (se muestra solo si está logueado) -->
+    <section class="py-5" id="contenidoTienda" style="display: none;">
+        <div class="container">
+            <h2 class="text-center text-metal mb-5">TIENDA METALCORE NATION</h2>
+            <p class="text-center text-Black mb-5">Encuentra los mejores instrumentos, camisetas y accesorios con el estilo que te gusta 🤘</p>
+
+            <!-- Categoría: Instrumentos -->
+            <h3 class="categoria-titulo">🎸 INSTRUMENTOS</h3>
+            <div class="row g-4 mb-5">
+                <!-- Producto 1 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="producto-card p-3">
+                        <img src="./static/img/guitarra.jpeg" alt="Guitarra Eléctrica" class="producto-imagen">
+                        <div class="p-3">
+                            <h5 class="text-white">Guitarra Eléctrica Metal Pro</h5>
+                            <p class="text-muted small">Ideal para géneros pesados, con sonido potente</p>
+                            <p class="precio">$ 1.500.000 COP</p>
+                            <button class="btn btn-metal w-100 agregar-carrito" 
+                        data-nombre="Guitarra Eléctica Metal Pro" 
+                        data-precio="1500000">
+                        Agregar al carrito
+                        </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="producto-card p-3">
+                        <img src="./static/img/bateria.jpeg" alt="Batería" class="producto-imagen">
+                        <div class="p-3">
+                            <h5 class="text-white">Batería Death Metal</h5>
+                            <p class="text-muted small">Sonido profundo y resistente para conciertos</p>
+                            <p class="precio">$ 2.250.000 COP</p>
+                            <button class="btn btn-metal w-100 agregar-carrito" 
+                            data-nombre="Batería Death Metal" 
+                            data-precio="2250000">
+                            Agregar al carrito
+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="producto-card p-3">
+                        <img src="./static/img/bajo.jpeg" alt="Bajo Eléctrico" class="producto-imagen">
+                        <div class="p-3">
+                            <h5 class="text-white">Bajo Eléctrico Extreme</h5>
+                            <p class="text-muted small">Calidad profesional para tocar lo mejor del metal</p>
+                            <p class="precio">$ 1.950.000 COP</p>
+                            <button class="btn btn-metal w-100 agregar-carrito" 
+                            data-nombre="Bajo Eléctrico Extreme" 
+                            data-precio="1950000">
+                            Agregar al carrito
+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categoría: Camisetas -->
+            <h3 class="categoria-titulo">👕 CAMISETAS Y ROPA</h3>
+            <div class="row g-4 mb-5">
+                <!-- Producto 4 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="producto-card p-3">
+                        <img src="./static/img/camisetakillswitch.jpeg" alt="Camiseta Killswitch Engage" class="producto-imagen">
+                        <div class="p-3">
+                            <h5 class="text-white">Camiseta Killswitch Engage</h5>
+                            <p class="text-muted small">Algodón 100% - Tallas S, M, L, XL</p>
+                            <p class="precio">$ 45.900 COP</p>
+                            <button class="btn btn-metal w-100 agregar-carrito" 
+                            data-nombre="Camiseta Killswitch Engage" 
+                            data-precio="45900">
+                            Agregar al carrito
+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 5 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="producto-card p-3">
+                        <img src="./static/img/camisetamotionless.jpeg" alt="Camiseta Architects" class="producto-imagen">
+                        <div class="p-3">
+                            <h5 class="text-white">Camiseta Motionless In White Original</h5>
+                            <p class="text-muted small">Diseño exclusivo - Calidad premium</p>
+                            <p class="precio">$ 99.900 COP</p>
+                            <button class="btn btn-metal w-100 agregar-carrito" 
+                            data-nombre="Camiseta Motionless In White Original" 
+                            data-precio="99900">
+                            Agregar al carrito
+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 6 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="producto-card p-3">
+                        <img src="./static/img/sudaderametalcorenation.jpeg" alt="Sudadera" class="producto-imagen">
+                        <div class="p-3">
+                            <h5 class="text-white">Sudadera Metalcore Nation</h5>
+                            <p class="text-muted small">Abrigo cálido - Diseño original</p>
+                            <p class="precio">$ 89.900 COP</p>
+                            <button class="btn btn-metal w-100 agregar-carrito" 
+                            data-nombre="Sudadera Metalcore Nation" 
+                            data-precio="89900">
+                            Agregar al carrito
+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categoría: Accesorios -->
+            <h3 class="categoria-titulo">🔧 ACCESORIOS</h3>
+            <div class="row g-4">
+                <!-- Producto 7 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="producto-card p-3">
+                        <img src="./static/img/cuerdasguitarra.jpeg" alt="Cuerdas de Guitarra" class="producto-imagen">
+                        <div class="p-3">
+                            <h5 class="text-white">Cuerdas de Guitarra</h5>
+                            <p class="text-muted small">Paquete de 6 unidades - Resistentes</p>
+                            <p class="precio">$ 12.900 COP</p>
+                            <button class="btn btn-metal w-100 agregar-carrito" 
+                            data-nombre="Cuerdas de Guitarra" 
+                            data-precio="12900">
+                            Agregar al carrito
+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 8 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="producto-card p-3">
+                        <img src="./static/img/parchespararopa.jpeg" alt="Parche" class="producto-imagen">
+                        <div class="p-3">
+                            <h5 class="text-white">Parches para Ropa</h5>
+                            <p class="text-muted small">Diseños de bandas - Aplícalos donde quieras</p>
+                            <p class="precio">$ 8.900 COP c/u</p>
+                            <button class="btn btn-metal w-100 agregar-carrito" 
+                            data-nombre="Parches para Ropa" 
+                            data-precio="8900">
+                            Agregar al carrito
+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 9 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="producto-card p-3">
+                        <img src="./static/img/tazaoficial.jpeg" alt="Taza" class="producto-imagen">
+                        <div class="p-3">
+                            <h5 class="text-white">Taza Oficial</h5>
+                            <p class="text-muted small">Material cerámico - Diseño único</p>
+                            <p class="precio">$ 15.900</p>
+                            <button class="btn btn-metal w-100 agregar-carrito" 
+                            data-nombre="Taza Oficial" 
+                            data-precio="15900">
+                            Agregar al carrito
+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<script>
+// 1. Variables del carrito
+let carrito = [];
+
+// 2. Elementos de la página
+const abrirCarrito = document.getElementById('abrirCarrito');
+const cerrarCarrito = document.getElementById('cerrarCarrito');
+const ventanaCarrito = document.getElementById('ventanaCarrito');
+const listaCarrito = document.getElementById('listaCarrito');
+const contadorCarrito = document.getElementById('contadorCarrito');
+const totalCarrito = document.getElementById('totalCarrito');
+const botonesAgregar = document.querySelectorAll('.agregar-carrito');
+const btnComprar = document.getElementById('btnComprar');
+
+// 3. Abrir y cerrar el carrito
+abrirCarrito.addEventListener('click', () => {
+    // ✅ No abrir si el carrito está vacío
+    if (carrito.length === 0) {
+        alert('¡Tu carrito está vacío! Agrega productos primero 🛒');
+        return;
+    }
+    ventanaCarrito.classList.add('abierto');
+});
+
+cerrarCarrito.addEventListener('click', () => {
+    ventanaCarrito.classList.remove('abierto');
+});
+
+// ✅ Cerrar al dar clic fuera de la ventana
+document.addEventListener('click', (e) => {
+    const esVentana = ventanaCarrito.contains(e.target);
+    const esIcono = abrirCarrito.contains(e.target);
+    
+    if (!esVentana && !esIcono) {
+        ventanaCarrito.classList.remove('abierto');
+    }
+});
+
+// 4. Agregar productos al carrito
+botonesAgregar.forEach(boton => {
+    boton.addEventListener('click', () => {
+        // Tomar datos del botón
+        const nombre = boton.getAttribute('data-nombre');
+        const precio = parseInt(boton.getAttribute('data-precio'));
+
+        // Revisar si ya está el producto
+        const existe = carrito.find(item => item.nombre === nombre);
+
+        if (existe) {
+            existe.cantidad += 1;
+        } else {
+            carrito.push({
+                nombre: nombre,
+                precio: precio,
+                cantidad: 1
+            });
+        }
+
+        // Actualizar todo
+        actualizarCarrito();
+        ventanaCarrito.classList.add('abierto');
+    });
+});
+
+// 5. Función para actualizar el carrito
+function actualizarCarrito() {
+    // Limpiar lo que hay
+    listaCarrito.innerHTML = '';
+
+    // Si no hay productos
+    if (carrito.length === 0) {
+        listaCarrito.innerHTML = '<p class="text-white text-center">Tu carrito está vacío 😢</p>';
+        contadorCarrito.textContent = '0';
+        totalCarrito.textContent = '0';
+        return;
+    }
+
+    // Mostrar productos
+    let total = 0;
+    carrito.forEach((producto, indice) => {
+        total += producto.precio * producto.cantidad;
+
+        const item = document.createElement('div');
+        item.className = 'item-carrito';
+        item.innerHTML = `
+            <span class="btn-eliminar" data-indice="${indice}">&times;</span>
+            <h5>${producto.nombre}</h5>
+            <p>Cantidad: ${producto.cantidad} | Precio: $${producto.precio.toLocaleString()}</p>
+        `;
+        listaCarrito.appendChild(item);
+    });
+
+    // Actualizar números
+    contadorCarrito.textContent = carrito.reduce((suma, item) => suma + item.cantidad, 0);
+    totalCarrito.textContent = total.toLocaleString();
+
+    // Botón para eliminar
+    document.querySelectorAll('.btn-eliminar').forEach((boton, indice) => {
+        boton.addEventListener('click', () => {
+            carrito.splice(indice, 1);
+            actualizarCarrito();
+        });
+    });
+}
+
+// 6. Botón de comprar
+btnComprar.addEventListener('click', () => {
+    if (carrito.length === 0) {
+        alert('¡Tu carrito está vacío! Agrega productos antes de comprar.');
+        return;
+    }
+
+    // 👉 AQUÍ EMPIEZA LO NUEVO DE LA FACTURA
+    let textoFactura = "🎸 FACTURA DE COMPRA - METALCORE NATION 🎸\n";
+    textoFactura += "Fecha: " + new Date().toLocaleString() + "\n\n";
+    let totalFinal = 0;
+
+    // Recorremos todo lo que hay en el carrito
+    carrito.forEach(producto => {
+        let subtotal = producto.precio * producto.cantidad;
+        totalFinal += subtotal;
+
+        textoFactura += "Producto: " + producto.nombre + "\n";
+        textoFactura += "Cantidad: " + producto.cantidad + " u\n";
+        textoFactura += "Precio u: $" + producto.precio.toLocaleString() + " COP\n";
+        textoFactura += "Subtotal: $" + subtotal.toLocaleString() + " COP\n";
+        textoFactura += "-------------------------\n";
+    });
+
+    textoFactura += "\n💰 TOTAL A PAGAR: $" + totalFinal.toLocaleString() + " COP\n";
+    textoFactura += "\n¡Gracias por tu compra! 🤘";
+
+    // Mostramos la factura en una ventana nueva
+    window.open().document.write("<div style='background:#1a1a1a; color:#fff; padding:25px; max-width:550px; margin:20px auto; border:2px solid #ff4500; border-radius:10px; font-family:Arial;'>" + textoFactura.replace(/\n/g, "<br>") + "</div>");
+    
+
+    // Vaciar carrito
+    carrito = [];
+    actualizarCarrito();
+    ventanaCarrito.classList.remove('abierto');
+});
+
+// 7. Verificar inicio de sesión
+document.addEventListener('DOMContentLoaded', function() {
+    const sesionActiva = localStorage.getItem('sesionActiva');
+    const mensajeAcceso = document.getElementById('mensajeAcceso');
+    const contenidoTienda = document.getElementById('contenidoTienda');
+
+    if (sesionActiva === 'true') {
+        mensajeAcceso.style.display = 'none';
+        contenidoTienda.style.display = 'block';
+    } else {
+        mensajeAcceso.style.display = 'block';
+        contenidoTienda.style.display = 'none';
+    }
+});
+</script>
+</body>
+</html>
+

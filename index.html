@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metalcore Nation - Tu Guía del Género</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./static/css/estilos.css">
+        <script src="./static/js/FORMULARIO.JS"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+<body class="bg-metal text-white">
+<!-- Barra de Navegación -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-metal-light sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <i class="bi bi-guitar fs-4"></i> METALCORE NATION
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active text-metal" href="#inicio">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#bandas">Bandas Destacadas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#discos">Discos Iconos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Comunidad</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#top10">Top 10 2026</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./canciones.html">Canciones de Álbumes</a>
+                </li>
+                <li class="nav-item">
+    <a class="nav-link" href="tienda.html">Tienda</a>
+</li>
+
+                <!-- ✅ Iniciar Sesión -->
+                <li class="nav-item" id="menuIniciarSesion">
+                    <a class="nav-link text-metal" href="#inicio-sesion">Iniciar Sesión</a>
+                </li>
+
+                <!-- ✅ Mi Cuenta (OCULTA AL PRINCIPIO) -->
+                <li class="nav-item" id="menuCuenta" style="display: none;">
+                    <a class="nav-link text metal" href="micuenta.html">Mi Cuenta</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Encabezado -->
+    <section id="inicio" class="text-center py-5">
+        <div class="container">
+            <h1 class="display-4 text-metal mb-3">EL METALCORE LLEGA A TU MUNDO</h1>
+            <p class="lead mb-4">Riffs pesados, breakdowns demoledores y letras con mensaje</p>
+            <button class="btn btn-metal btn-lg">
+                <i class="bi bi-volume-up-fill"></i> ¡Descubre el Género!
+            </button>
+        </div>
+    </section>
+
+    <!-- Contenido Principal -->
+    <main class="container my-4">
+        <!-- Sección: ¿Qué es el Metalcore? -->
+        <section class="mb-5 p-4 bg-metal-light rounded-3">
+            <h2 class="text-metal mb-3">¿Qué es el Metalcore?</h2>
+            <p>Es un subgénero que fusiona elementos del heavy metal y el hardcore punk. Se caracteriza por los riffs de guitarra distorsionada, los ritmos rápidos, los breakdowns y la combinación de gritos y voces melódicas. Surgió en los años 90 y se expandió globalmente en la década del 2000.</p>
+            <div class="mt-3">
+                <span class="badge bg-secondary me-2">Riffs Pesados</span>
+                <span class="badge bg-secondary me-2">Breakdowns</span>
+                <span class="badge bg-secondary me-2">Voces Extremas</span>
+                <span class="badge bg-secondary">Estructuras Complejas</span>
+            </div>
+        </section>
+
+        <!-- Sección: Bandas Destacadas -->
+        <section id="bandas" class="mb-5">
+            <h2 class="text-center text-metal mb-4">BANDAS DESTACADAS</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card-metal card h-100 shadow-sm">
+                        <img src="https://i.pinimg.com/564x/27/90/06/27900654847c71007ca38c0f2d8d2920.jpg" class="card-img-top" alt="Killswitch Engage">
+                        <div class="card-body text-center">
+                            <h3 class="card-title text-metal">Killswitch Engage</h3>
+                            <p class="card-text">Una de las bandas pioneras del género, originaria de Estados Unidos. Conocidas por sus melodías épicas y letras sobre superación.</p>
+                            <span class="badge bg-metal text-white">Fundada en 1999</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-metal card h-100 shadow-sm">
+                        <img src="https://i.pinimg.com/736x/e0/1b/f9/e01bf9e48fa8aa978cb7a2d41cde6dc6.jpg" class="card-img-top" alt="Architects">
+                        <div class="card-body text-center">
+                            <h3 class="card-title text-metal">Architects</h3>
+                            <p class="card-text">Banda británica que ha evolucionado el género incorporando elementos progresivos y letras sobre conciencia ambiental.</p>
+                            <span class="badge bg-metal text-white">Fundada en 2004</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-metal card h-100 shadow-sm">
+                        <img src="https://fontmeme.com/images/motionless-in-white-creatures.jpg" class="card-img-top" alt="Parkway Drive">
+                        <div class="card-body text-center">
+                            <h3 class="card-title text-metal">Motionless In White</h3>
+                            <p class="card-text">Originaria de Scranton, Pensilvania, Estados Unidos, una de las bandas más influyentes del metalcore moderno con shows enérgicos y potentes.</p>
+                            <span class="badge bg-metal text-white">Fundada en 2004</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Discos Iconos -->
+        <section id="discos" class="mt-5 mb-5 p-4 bg-metal-light rounded-3">
+            <h2 class="text-center text-metal mb-4">DISCOS ICONOS DEL GÉNERO</h2>
+            <div class="row g-3">
+                <div class="col-md-3 col-sm-6 text-center">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Music/20/92/7d/mzi.jqbwukvb.jpg/600x600bf-60.jpg" class="img-fluid rounded-circle shadow-sm mb-2" alt="Disco The End of Heartache">
+                    <h5 class="text-metal">Killswitch Engage</h5>
+                    <p class="mb-0">The End of Heartache (2004)</p>
+                </div>
+                <div class="col-md-3 col-sm-6 text-center">
+                    <img src="https://cdn-images.dzcdn.net/images/cover/8980b8dcb5c8f281d10fcc7c7344ca69/0x1900-000000-80-0-0.jpg" class="img-fluid rounded-circle shadow-sm mb-2" alt="Disco All Our Gods Have Abandoned Us">
+                    <h5 class="text-metal">Architects</h5>
+                    <p class="mb-0">All Our Gods Have Abandoned Us (2016)</p>
+                </div>
+                <div class="col-md-3 col-sm-6 text-center">
+                    <img src="https://akamai.sscdn.co/letras/360x360/albuns/2/8/f/b/4638641771527709.jpg" class="img-fluid rounded-circle shadow-sm mb-2" alt="Disco Deep Blue">
+                    <h5 class="text-metal">Motionless In White</h5>
+                    <p class="mb-0">Creatures X (2020)</p>
+                </div>
+                <div class="col-md-3 col-sm-6 text-center">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/a7/fb/bb/a7fbbb26-78d3-498d-34b8-a32c86819b33/mzi.gnrzimtc.jpg/600x600bf-60.jpg" class="img-fluid rounded-circle shadow-sm mb-2" alt="Disco As I Lay Dying">
+                    <h5 class="text-metal">As I Lay Dying</h5>
+                    <p class="mb-0">An Ocean Between Us (2007)</p>
+                </div>
+            <!-- BOTÓN CANCIONES-->
+    <div class="text-center mt-4">
+        <a href="./canciones.html" class="btn btn-metal">
+            <i class="bi bi-music-note-list"></i> Ver Canciones de los Álbumes
+        </a>
+    </div>
+            </div>
+        </section>
+
+        <!-- Sección: Top 10 Canciones 2026 -->
+<section id="top10" class="mt-5 mb-5">
+    <h2 class="text-center text-metal mb-4">🔥 TOP 10 CANCIONES METALCORE 2026 🔥</h2>
+    <div class="bg-metal-light rounded-3 p-4">
+        <ol class="list-group list-group-numbered list-group-flush">
+            <!-- Canción 1 -->
+            <li class="list-group-item bg-metal-light d-flex justify-content-between align-items-center">
+                <div>
+                    <h5 class="text-metal mb-1">Motionless In White – <span class="text-white">Afraid of the Dark</span></h5>
+                    <small class="text-small-custom">Himno del año con breakdowns demoledores</small>
+                </div>
+                <div class="btn-group" role="group">
+
+                    <a href="https://www.youtube.com/watch?v=jolaO2Z6xCM&list=RDjolaO2Z6xCM&start_radio=1" target="_blank" class="btn btn-sm btn-metal">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                </div>
+            </li>
+
+            <!-- Canción 2 -->
+            <li class="list-group-item bg-metal-light d-flex justify-content-between align-items-center">
+                <div>
+                    <h5 class="text-metal mb-1">ERRA – <span class="text-white">Further Eden</span></h5>
+                    <small class="text-small-custom">Metalcore progresivo con técnica extrema</small>
+                </div>
+                <div class="btn-group" role="group">
+
+                    <a href="https://www.youtube.com/watch?v=bkc2KGijZgo&list=RDbkc2KGijZgo&start_radio=1" target="_blank" class="btn btn-sm btn-metal">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                </div>
+            </li>
+
+            <!-- Canción 3 -->
+            <li class="list-group-item bg-metal-light d-flex justify-content-between align-items-center">
+                <div>
+                    <h5 class="text-metal mb-1">The Amity Affliction – <span class="text-white">House of Cards</span></h5>
+                    <small class="text-small-custom">Potencia emocional con nueva voz</small>
+                </div>
+                <div class="btn-group" role="group">
+
+                    <a href="https://www.youtube.com/watch?v=Tq_x8bO3wSE&list=RDTq_x8bO3wSE&start_radio=1" target="_blank" class="btn btn-sm btn-metal">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                </div>
+            </li>
+
+            <!-- Canción 4 -->
+            <li class="list-group-item bg-metal-light d-flex justify-content-between align-items-center">
+                <div>
+                    <h5 class="text-metal mb-1">Atreyu – <span class="text-white">Ego Death</span></h5>
+                    <small class="text-small-custom">Veteranos con sonido más pesado</small>
+                </div>
+                <div class="btn-group" role="group">
+
+                    <a href="https://www.youtube.com/watch?v=GHwcGQ0NypM&list=RDGHwcGQ0NypM&start_radio=1" target="_blank" class="btn btn-sm btn-metal">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                </div>
+            </li>
+
+            <!-- Canción 5 -->
+            <li class="list-group-item bg-metal-light d-flex justify-content-between align-items-center">
+                <div>
+                    <h5 class="text-metal mb-1">Spiritbox – <span class="text-white">Tsunami Sea</span></h5>
+                    <small class="text-small-custom">Éxito que sigue dominando las listas</small>
+                </div>
+                <div class="btn-group" role="group">
+
+                    <a href="https://www.youtube.com/watch?v=hsKtH4gp6Vk&list=RDhsKtH4gp6Vk&start_radio=1" target="_blank" class="btn btn-sm btn-metal">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                </div>
+            </li>
+
+            <!-- Canción 6 -->
+            <li class="list-group-item bg-metal-light d-flex justify-content-between align-items-center">
+                <div>
+                    <h5 class="text-metal mb-1">Cole Rolland (ft. Alissa White-Gluz) – <span class="text-white">Breathing</span></h5>
+                    <small class="text-small-custom">Colaboración épica de guitarra y growl</small>
+                </div>
+                <div class="btn-group" role="group">
+
+                    <a href="https://www.youtube.com/watch?v=k1Ngv5Srql4&list=RDk1Ngv5Srql4&start_radio=1" target="_blank" class="btn btn-sm btn-metal">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                </div>
+            </li>
+
+            <!-- Canción 7 -->
+            <li class="list-group-item bg-metal-light d-flex justify-content-between align-items-center">
+                <div>
+                    <h5 class="text-metal mb-1">Thunderforge – <span class="text-white">Steel & Fire</span></h5>
+                    <small class="text-small-custom">Banda emergente con solos técnicos</small>
+                </div>
+                <div class="btn-group" role="group">
+
+                    <a href="https://www.youtube.com/watch?v=3hPH9wBbNE4&list=RD3hPH9wBbNE4&start_radio=1" target="_blank" class="btn btn-sm btn-metal">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                </div>
+            </li>
+
+            <!-- Canción 8 -->
+            <li class="list-group-item bg-metal-light d-flex justify-content-between align-items-center">
+                <div>
+                    <h5 class="text-metal mb-1">Sleep Token – <span class="text-white">Rain</span></h5>
+                    <small class="text-small-custom">Tema iconico que domina festivales en 2026</small>
+                </div>
+                <div class="btn-group" role="group">
+
+                    <a href="https://www.youtube.com/watch?v=7Fncun4ObQk&list=RD7Fncun4ObQk&start_radio=1" target="_blank" class="btn btn-sm btn-metal">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                </div>
+            </li>
+
+            <!-- Canción 9 -->
+            <li class="list-group-item bg-metal-light d-flex justify-content-between align-items-center">
+                <div>
+                    <h5 class="text-metal mb-1">NuCoreMetal – <span class="text-white">Shatter The Silence</span></h5>
+                    <small class="text-small-custom">Fusión de nu-metal y metalcore moderno</small>
+                </div>
+                <div class="btn-group" role="group">
+
+                    <a href="https://www.youtube.com/watch?v=5P0reKCM3mo&list=RD5P0reKCM3mo&start_radio=1" target="_blank" class="btn btn-sm btn-metal">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                </div>
+            </li>
+
+            <!-- Canción 10 -->
+            <li class="list-group-item bg-metal-light d-flex justify-content-between align-items-center">
+                <div>
+                    <h5 class="text-metal mb-1">The Pretty Wild – <span class="text-white">Zero Point Genesis</span></h5>
+                    <small class="text-small-custom">Dúo del momento con sonidos electrónicos</small>
+                </div>
+                <div class="btn-group" role="group">
+
+                    <a href="https://www.youtube.com/watch?v=XWQBW8HsW1o&list=RDXWQBW8HsW1o&start_radio=1" target="_blank" class="btn btn-sm btn-metal">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                </div>
+            </li>
+        </ol>
+    </div>
+</section>
+
+
+<!-- Sección: Formulario Comunidad -->
+<section id="contacto" class="mt-5">
+    <h2 class="text-center text-metal mb-4">ÚNETE A LA COMUNIDAD</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <form id="formularioComunidad" class="bg-metal-light p-4 rounded-3">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label text-metal">Tu Nombre</label>
+                    <input type="text" class="form-control bg-metal text-white border-metal" id="nombre" placeholder="Escribe tu nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="correo" class="form-label text-metal">Correo Electrónico</label>
+                    <input type="email" class="form-control bg-metal text-white border-metal" id="correo" placeholder="tu@email.com" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="contrasena" class="form-label text-metal">Contraseña</label>
+                    <input type="password" class="form-control bg-metal text-white border-metal" id="contrasena" placeholder="Crea tu contraseña" required>
+                </div>
+                <div class="mb-3">
+                    <label for="banda" class="form-label text-metal">Banda Favorita</label>
+                    <select class="form-select bg-metal text-white border-metal" id="banda" required>
+                        <option selected value="">Selecciona tu banda favorita</option>
+                        <option value="killswitch">Killswitch Engage</option>
+                        <option value="architects">Architects</option>
+                        <option value="parkway">Parkway Drive</option>
+                        <option value="Motionless In White">Motionless In White</option>
+                        <option value="otro">Otra banda</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="comentario" class="form-label text-metal">¿Qué te gusta del metalcore?</label>
+                    <textarea class="form-control bg-metal text-white border-metal" id="comentario" rows="3" placeholder="Escribe tu opinión o sugerencias" required></textarea>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-metal">Unirme Ahora</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+</main>
+
+<!-- Sección: Iniciar Sesión -->
+<section id="inicio-sesion" class="mt-5">
+    <h2 class="text-center text-metal mb-4">INICIAR SESIÓN</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form id="formularioLogin" class="bg-metal-light p-4 rounded-3">
+                <div class="mb-3">
+                    <label for="login_nombre" class="form-label text-metal">Tu Nombre</label>
+                    <input type="text" class="form-control bg-metal text-white border-metal" id="login_nombre" placeholder="Escribe tu nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="login_correo" class="form-label text-metal">Correo Electrónico</label>
+                    <input type="email" class="form-control bg-metal text-white border-metal" id="login_correo" placeholder="tu@email.com" required>
+                </div>
+                <div class="mb-3">
+                    <label for="login_contrasena" class="form-label text-metal">Contraseña</label>
+                    <input type="password" class="form-control bg-metal text-white border-metal" id="login_contrasena" placeholder="Tu contraseña" required>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-metal">Entrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+    <!-- Pie de Página -->
+    <footer class="bg-metal-light text-center py-3 mt-5">
+        <p class="mb-1"><i class="bi bi-guitar text-metal"></i> METALCORE NATION - TODO SOBRE TU GÉNERO FAVORITO</p>
+        <small>
+            <a href="#" class="text-white text-decoration-none me-2"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="text-white text-decoration-none me-2"><i class="bi bi-spotify"></i></a>
+            <a href="#" class="text-white text-decoration-none me-2"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white text-decoration-none"><i class="bi bi-facebook"></i></a>
+            <br>
+            Bogotá, Colombia &copy; Marzo 2026 | Santiago Sanclemente Aponte. Amor por el Metalcore.
+        </small>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
