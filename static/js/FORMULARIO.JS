@@ -129,9 +129,12 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        const nombre = localStorage.getItem('usuarioActual');
-        const elementoNombre = document.getElementById('nombreUsuario');
-        if (elementoNombre) elementoNombre.textContent = nombre;
+// Cargamos el nombre y LIMPIAMOS las comillas que sobran
+const nombre = localStorage.getItem('usuarioActual');
+const elementoNombre = document.getElementById('nombreUsuario');
+if (elementoNombre) {
+    elementoNombre.textContent = nombre.replace(/"/g, '');
+}
 
         misBandas = JSON.parse(localStorage.getItem('misBandas_' + nombre)) || [];
         mostrarBandasEnPantalla();
