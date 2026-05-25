@@ -130,21 +130,25 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // ✅ CARGAR NOMBRE 
-        const nombreGuardado = localStorage.getItem('usuarioActual');
-        const elementoNombre = document.getElementById('nombreUsuario');
+// ✅ CARGAR NOMBRE 
+const elementoNombre = document.getElementById('nombreUsuario');
 
-        // 🛡️ SIEMPRE MUESTRA ALGO
-        if (elementoNombre) {
-            if (nombreGuardado && nombreGuardado !== "undefined") {
-                // Limpiamos cualquier cosa rara
-                const nombreLimpio = nombreGuardado.replace(/["']/g, '').trim();
-                elementoNombre.textContent = nombreLimpio;
-            } else {
-                
-                elementoNombre.textContent = "Usuario";
-            }
-        }
+// 🚀 FUNCIÓN QUE ESPERA HASTA ENCONTRAR EL NOMBRE
+function cargarNombre() {
+    const nombreGuardado = localStorage.getItem('usuarioActual');
+    
+    if (nombreGuardado && nombreGuardado !== "undefined" && nombreGuardado !== "null") {
+        // Limpiamos cualquier carácter raro
+        const nombreLimpio = nombreGuardado.replace(/["'`]/g, '').trim();
+        elementoNombre.textContent = nombreLimpio;
+    } else {
+        // Si no está listo, vuelve a intentar en 50 milisegundos
+        setTimeout(cargarNombre, 50);
+    }
+}
+
+// ¡INICIAMOS LA BÚSQUEDA!
+cargarNombre();
 
         // 📤 CARGAR BANDAS (arreglamos para que no dé error)
         const nombreParaBandas = localStorage.getItem('usuarioActual')?.replace(/["']/g, '') || "Usuario";
