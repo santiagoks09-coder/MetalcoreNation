@@ -192,12 +192,12 @@
 /* ---------------- ESTILOS DE LA FACTURA ---------------- */
 .factura-estilo {
     font-family: 'Arial', sans-serif;
-    background-color: #1a1a1a; /* Fondo oscuro igual que tu tienda */
+    background-color: #1a1a1a; /* Fondo oscuro igual que tienda */
     color: #ffffff; /* Texto blanco */
     max-width: 550px; /* Ancho máximo */
     margin: 30px auto; /* Centrar la factura */
     padding: 25px; /* Espacio interior */
-    border: 2px solid #ff4500; /* Borde naranja de tu marca */
+    border: 2px solid #ff4500; /* Borde naranja de marca */
     border-radius: 10px; /* Esquinas redondeadas */
 }
 
@@ -227,7 +227,7 @@
 .factura-total {
     font-size: 22px; /* Letra más grande para el total */
     font-weight: bold; /* Letra gruesa */
-    color: #00ff88; /* Color verde como tus precios */
+    color: #00ff88; /* Color verde como precios */
     text-align: right; /* Alinear a la derecha */
     margin-top: 20px; /* Espacio arriba */
     padding-top: 15px; /* Espacio interior arriba */

@@ -189,3 +189,12 @@ function mostrarBandasEnPantalla() {
             }
         });
 
+// Cerrar sesión correctamente
+function cerrarSesion() {
+    // Borra lo guardado para que cierre la sesión
+    localStorage.removeItem('sesionActiva');
+    localStorage.removeItem('usuarioActual');
+    
+    // Redirige al inicio. Como index.html está al mismo nivel
+    window.location.href = "index.html";
+}
