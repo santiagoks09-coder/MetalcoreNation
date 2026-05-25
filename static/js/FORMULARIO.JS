@@ -130,30 +130,30 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-// ✅ CARGAR NOMBRE 
+// CARGAR NOMBRE
 const elementoNombre = document.getElementById('nombreUsuario');
 
-// 🚀 FUNCIÓN QUE ESPERA HASTA ENCONTRAR EL NOMBRE
+// FUNCIÓN QUE ESPERA HASTA ENCONTRAR EL NOMBRE
 function cargarNombre() {
     const nombreGuardado = localStorage.getItem('usuarioActual');
     
     if (nombreGuardado && nombreGuardado !== "undefined" && nombreGuardado !== "null") {
-        // Limpiamos cualquier carácter raro
+        // Limpiamos cualquier carácter raro o comilla
         const nombreLimpio = nombreGuardado.replace(/["'`]/g, '').trim();
         elementoNombre.textContent = nombreLimpio;
     } else {
-        // Si no está listo, vuelve a intentar en 50 milisegundos
+        // Si no está listo, vuelve a intentar cada 50 milisegundos
         setTimeout(cargarNombre, 50);
     }
 }
 
-// ¡INICIAMOS LA BÚSQUEDA!
+// ¡INICIAMOS!
 cargarNombre();
 
-        // 📤 CARGAR BANDAS (arreglamos para que no dé error)
-        const nombreParaBandas = localStorage.getItem('usuarioActual')?.replace(/["']/g, '') || "Usuario";
-        misBandas = JSON.parse(localStorage.getItem('misBandas_' + nombreParaBandas)) || [];
-        mostrarBandasEnPantalla();
+// CARGAR BANDAS (arreglado para que no dé error)
+const nombreParaBandas = localStorage.getItem('usuarioActual')?.replace(/["'`]/g, '').trim() || "Usuario";
+misBandas = JSON.parse(localStorage.getItem('misBandas_' + nombreParaBandas)) || [];
+mostrarBandasEnPantalla();
 
         // 🚪 BOTÓN CERRAR SESIÓN (PERFECTO)
         const btnCerrar = document.getElementById('btnCerrar');
